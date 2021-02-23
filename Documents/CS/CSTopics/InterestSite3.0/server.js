@@ -143,7 +143,6 @@ app.post('/blog/comment/:blogname', function(request, response) {
 
   if(blog_info[blogname]){
       //if (!blog_info[blogname].comments[commentNum].likes) blog_info[blogname].comments[commentNum].likes = 0;
-
       blog_info[blogname].comments[commentCount]=request.body;
 
       fs.writeFileSync('data/content.json', JSON.stringify(blog_info));
