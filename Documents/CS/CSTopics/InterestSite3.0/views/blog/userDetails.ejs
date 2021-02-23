@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EJS Express Demo</title>
+<link rel="icon" type="image/png" href="images/logo.png"/>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%-include('../partials/navbar')-%>
+
+<h1>User - <%=user.username%></h1>
+
+<img src="<%=user.photo%>" height=150/>
+
+<table>
+<tr>
+  <th>
+    Name:
+  </th>
+  <td>
+  <%=user.name%>
+  </td>
+</tr>
+<tr>
+  <th>
+    Wins:
+  </th>
+  <td>
+    <%=user.wins%>
+  </td>
+</tr>
+<tr>
+  <th>
+    Losses:
+  </th>
+  <td>
+    <%=user.losses%>
+  </td>
+</tr>
+<tr>
+  <th>
+    Win %:
+  </th>
+  <td>
+    <%=user.win_percent%>
+  </td>
+</tr>
+</table>
+<script src="/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<%- include('global/header', {title:"About", isBlog:false}); %>
+<%- include('global/navbar', {blog_info: allPosts, isBlog:true}); %>
+
+<h1><%= data.Title %></h1>
+
+<div class="container-fluid">
+  <h1>About Coffee</h1>
+
+  <div class="row">
+    <div class="col-lg">
+        <p>I love coffee. Black coffee, iced coffee, espresso, and cappuccino.
+           I've been drinking coffee for a long time. Its properties as a stimulant
+           are useful at times, but more than that, I enjoy coffee for its complex flavors.
+           Coffee comes in a million different varieties. To the new coffee drinker however,
+           it may only taste bitter. Usually this is a result of the bitter flavors one is
+           not used to overpowering the other flavors. Once you acclimate to the bitterness,
+           the complexity and variety of different coffee blends are really interesting.
+           Fruity blends, smoky blends, light roast, dark roast — the possibilities are endless.
+           Additionally, the politics of the coffee trade are very relevant, as coffee is
+           one of the most widely traded goods in the world.
+        </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg">
+          <h2>Resource Links</h2>
+    </div>
+  </div>
+
+
+  <div class="row little">
+    <div class="col-lg">
+      <h4><span class="badge badge-pill badge-light"><a href="https://www.businessinsider.com/facts-about-the-coffee-industry-2011-11">Information on the global coffee industry</a></span></h4>
+    </div>
+  </div>
+
+  <div class="row little">
+    <div class="col-lg">
+      <h4><span class="badge badge-pill badge-light"><a href="https://www.ncausa.org/About-Coffee">The National Association of Coffee</a></span> has interesting information on the physical effects of coffee.</h4>
+    </div>
+  </div>
+
+  <div class="row little">
+    <div class="col-lg">
+        <h4><span class="badge badge-pill badge-light"><a href="https://bylinetimes.com/2020/07/02/from-bean-to-brew-the-hidden-cost-of-coffee-slavery/">Human Rights issues in the coffee industry</a></span></h4>
+    </div>
+  </div>
+
+
+</div>
+
+<%- include ('global/footer'); %>
