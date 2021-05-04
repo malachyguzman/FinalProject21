@@ -1,0 +1,69 @@
+<%- include('../global/header', {title:"Discussion", isBlog:true}); %>
+<%- include('../global/navbar', {blog_info: allPosts, isBlog:true}); %>
+
+
+<div class="container-fluid">
+  <h1>Discussion</h1>
+
+  <div class="row">
+    <div class="col-lg">
+        <p>Rules:
+        <br>1: Be nice
+        <br>2: Taco conversation only
+        </p>
+    </div>
+  </div>
+
+
+
+<div class="row">
+  <div class="col-lg">
+
+  <h2>Latest:</h2>
+  <a class="create" href="/discussion/createDiscussion">Create a new discussion post</a><br><br>
+
+
+  <%for(key in discussion){%>
+    <%let comment = discussion[key].content; %>
+    <%let author  = discussion[key].author; %>
+    <%let date    = discussion[key].date; %>
+    <%let likes   = discussion[key].likes; %>
+    <%let replies = discussion[key].replies; %>
+
+    <div class="commentTag" id="<%=key%>"> <%=comment+" - by "+author+" on "+date%> </div> <br>
+
+    Likes: <span id="like_count<%=key%>"><%=likes%></span>
+    <button id="like_button<%=key%>" type="button">Like</button><br><br>
+
+  <%}%>
+</div>
+</div>
+
+  <!-- <div class="row">
+    <div class="col-lg">
+          <h2>Resource Links</h2>
+    </div>
+  </div>
+
+  <div class="row little">
+    <div class="col-lg">
+      <h4><span class="badge badge-pill badge-light"><a href="https://www.businessinsider.com/facts-about-the-coffee-industry-2011-11">Information on the global coffee industry</a></span></h4>
+    </div>
+  </div>
+
+  <div class="row little">
+    <div class="col-lg">
+      <h4><span class="badge badge-pill badge-light"><a href="https://www.ncausa.org/About-Coffee">The National Association of Coffee</a></span> has interesting information on the physical effects of coffee.</h4>
+    </div>
+  </div>
+
+  <div class="row little">
+    <div class="col-lg">
+        <h4><span class="badge badge-pill badge-light"><a href="https://bylinetimes.com/2020/07/02/from-bean-to-brew-the-hidden-cost-of-coffee-slavery/">Human Rights issues in the coffee industry</a></span></h4>
+    </div>
+  </div> -->
+
+
+</div>
+
+<%- include ('../global/footer'); %>
