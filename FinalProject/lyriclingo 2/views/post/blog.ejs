@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<%- include('../global/navbar', {entry: totalposts }); %>
+<%- include('../global/header' ,{title: blogname}); %>
+
+<div class="containerblog">
+  <div class="row">
+    <div class="col-sm">
+
+      <h5> Written by <%= data.author %></h5>
+      <h4>
+        <br>
+        Date: <%= data.date %>
+        <br>
+        Lyric: <%= data.lyric %>
+        <br>
+      </h4>
+      <h6> <%= data.entry %> </h6>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <br>
+      <h5> Leave a comment!</h5>
+      <div id="create_comment" class="text-center"> 
+        <% let authors = ["user1", "user2", "user3", "user4"]; %> 
+        <label for="author">Author:</label><br> 
+        <select name="author" id="author"> 
+          <% for (let author of authors) {%> 
+          <option value="<%=author%>"><%=author%></option> 
+          <%}%> 
+                   </select> 
+                    <br></br>  
+                    <label for="content">Content:</label><br> 
+                    <textarea id="content" name="content"></textarea> 
+                     <br></br>  
+                      <button id = "comment_button" class = "btn btn-danger" type = "button"> Post! </button> 
+                      <br></br> 
+
+                    </div>
+
+                <div id = "space">
+                     <h5> Your Comments!</h5>
+
+                </div>
+          <div>
+            <br>
+            <h5> Posted Comments!</h5>
+
+          <%  for (let i = 0; i <data.comments.length; i++){ %>
+          <p2> <%= data.comments[i].author%> </p2><br>
+          <p1> <%= data.comments[i].date%> </p1>
+
+          <p> <%= data.comments[i].content%> </p>
+          <h2><span id="like_count_<%=i%>"><%=data.comments[i].likes%></span> <button id="like_button_<%=i%>" class = "btn<%=i%> btn-warning"  type="button">Like!</button> </h2>
+
+
+          <br>
+          <br>
+          <br>
+          <%}%>
+          </div>
+
+    </div>
+  </div>
+</div>
+
+</tr>
+
+</table>
+</section>
+<%- include('../global/footer'); %>
+
+</html>

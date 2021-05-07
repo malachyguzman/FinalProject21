@@ -1,0 +1,40 @@
+<html lang="en">
+
+<%- include('global/navbar', {entry: data}); %>
+<%- include('global/header', {title: "Lyric Posts Collection"}); %>
+
+
+
+<header <br>
+  <h2> See what others have to say!</h2>
+</header>
+
+<div class="top row">
+  <div class="row ">
+    <div class="col-lg">
+      <div class="lyriclist" aria-labelledby="posts">
+        <%for (key in data){%>
+        <% let blogs = data[key].title;%>
+
+        <a class="lyricpage" href= "/blog/<%=blogs%>" ><%= data[key].title %> </a>
+      	</form>
+        <%}%>
+
+      </div>
+      <h10> Placeholder, page works</h10>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="js/scripts.js"></script>
+<%- include('global/footer'); %>
+
+</html>

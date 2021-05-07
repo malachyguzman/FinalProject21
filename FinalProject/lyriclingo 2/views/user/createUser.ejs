@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <%-include('../global/navbar',{entry: totalposts });-%>
+  <%- include('../global/header' ,{title: "Join the Club!"}); %>
+
+
+  <form action="/user" method="post">
+    <br>
+    <label for="name">Name:</label><br>
+    <input required type="name" id="title" name="name"><br>
+    <label for="username">Date:</label><br>
+    <input required type="username" id="date" name="username"><br>
+    <label for="birthday">Birthday(MM/DD/YYYY):</label><br>
+    <input required type="birthday" id="lyric" name="birthday"><br>
+    <label for="email">Email:</label><br>
+    <input required type="text" id="email" name="email"><br>
+    <label for="genre">Preferred Genre:</label><br>
+    <input required type="genre" id="genre" name="genre"><br>
+
+
+    <input type="submit" value="Submit">
+  </form>
+
+<%- include('../global/footer'); %>
+
+</html>
