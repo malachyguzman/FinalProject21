@@ -1,0 +1,36 @@
+{
+  "name": "interestsite3.0",
+  "version": "1.0.0",
+  "description": "## Installation Make sure to install node, fs, ejs, and less by running the commands below in the terminal",
+  "main": "server.js",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.6.0",
+    "less": "^3.12.2",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "14.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malachyguzman/TacoProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/malachyguzman/TacoProject/issues"
+  },
+  "homepage": "https://github.com/malachyguzman/TacoProject#readme"
+}

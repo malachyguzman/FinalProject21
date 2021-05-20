@@ -1,0 +1,16 @@
+<%-include('../partials/header', {page_title:"Ingredients in your Fridge!", isBlog: false});-%>
+
+<h1> Add the Ingredients that are in your Fridge! </h1>
+
+<form action="/user"  method="post">
+
+  <label for="Ingredients">Ingredients: (Place a comma and space between each ingredient)</label><br>
+    <input type="text" id="ingredients" name="ingredients"><br>
+
+  <label for="Username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<%-include('../partials/footer')-%>
